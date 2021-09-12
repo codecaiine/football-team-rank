@@ -3,16 +3,16 @@ const draggable_list = document.getElementById('draggable-list');
 const check = document.getElementById('check');
 
 const listTopTeam = [
-  'Italia',
-  'Spain',
-  'England',
-  'Cote d Ivoire',
-  'Nigeria',
-  'France',
-  'Algeria',
-  'Senegal',
-  'Brazil',
-  'Argentina',
+  { name: 'Italia', flag: 'flag of country' },
+  { name: 'France', flag: 'flag of country' },
+  { name: 'Portugual', flag: 'flag of country' },
+  { name: 'Japan', flag: 'flag of country' },
+  { name: 'Cote d Ivoire', flag: 'flag of country' },
+  { name: 'Brazil', flag: 'flag of country' },
+  { name: 'Argentina', flag: 'flag of country' },
+  { name: 'Algeria', flag: 'flag of country' },
+  { name: 'Senegal', flag: 'flag of country' },
+  { name: 'England', flag: 'flag of country' },
 ];
 
 const listItems = [];
@@ -32,7 +32,7 @@ function createList() {
       listItem.innerHTML = `
         <span class="number">${index + 1}</span>
         <div class="draggable" draggable="true">
-          <p class="team-name">${team}</p>
+          <p class="team-name">${team.flag} ${team.name}</p>
           <i class="fas fa-grip-lines"></i>
         </div>
       `;
